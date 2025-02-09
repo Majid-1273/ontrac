@@ -1,18 +1,21 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Home from "./pages/Home"; 
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import { LanguageProvider } from "./LanguageContext"; 
 
 function App() {
   return (
-    <BrowserRouter>
-    <div className="relative min-h-screen">
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-      </Routes>
-      </div>
-    </BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
+    </LanguageProvider>
   );
 }
 
