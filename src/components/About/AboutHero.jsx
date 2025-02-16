@@ -13,18 +13,25 @@ function AboutHero() {
                 "At OnTrac, we understand that addressing technology issues after they arise can be costlier and more disruptive. That's why our proactive IT management is strategically crafted to save you money and preemptively eliminate potential technology challenges for your business in New York City.",
             subheading2:
                 "Our approach integrates routine preventative maintenance and robust real-time monitoring across your critical network, desktop, and mobile devices. This proactive stance aims to minimize technology downtime, maximize staff productivity, and provide a more predictable budget for your IT expenses.",
-
             subheading3:
                 "OnTrac offers a comprehensive suite of monitoring and maintenance services. We collaborate with you to design a customized program that aligns with your specific business needs, ensuring a seamless and efficient IT environment.",
             subheading4:
                 "Choose OnTrac for a proactive IT solution that not only saves you money but also provides peace of mind, allowing you to focus on what matters most – the success of your business.",
         },
-
-
-
+    
         Arabic: {
+            heading: "خدماتنا للمؤسسات",
+            subheading1:
+                "في OnTrac، ندرك أن التعامل مع مشكلات التكنولوجيا بعد حدوثها قد يكون أكثر تكلفة وإزعاجًا. لهذا السبب، تم تصميم إدارتنا الاستباقية لتكنولوجيا المعلومات بشكل استراتيجي لتوفير المال والقضاء على التحديات التقنية المحتملة قبل أن تؤثر على عملك في مدينة نيويورك.",
+            subheading2:
+                "يعتمد نهجنا على دمج الصيانة الوقائية الدورية والمراقبة القوية في الوقت الفعلي عبر شبكتك الأساسية وأجهزة الكمبيوتر المكتبية والمحمولة. يهدف هذا النهج الاستباقي إلى تقليل وقت التوقف عن العمل بسبب التكنولوجيا، وزيادة إنتاجية الموظفين، وتوفير ميزانية أكثر استقرارًا لنفقات تكنولوجيا المعلومات.",
+            subheading3:
+                "تقدم OnTrac مجموعة شاملة من خدمات المراقبة والصيانة. نحن نتعاون معك لتصميم برنامج مخصص يتماشى مع احتياجات عملك المحددة، مما يضمن بيئة تكنولوجيا معلومات سلسة وفعالة.",
+            subheading4:
+                "اختر OnTrac لحل تكنولوجيا معلومات استباقي لا يوفر لك المال فحسب، بل يمنحك أيضًا راحة البال، مما يتيح لك التركيز على ما يهم أكثر – نجاح عملك.",
         },
     };
+    
 
     const currentTranslation =
         translations[selectedLanguage] || translations.English;
