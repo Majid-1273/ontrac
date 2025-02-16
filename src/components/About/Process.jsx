@@ -138,8 +138,8 @@ const Process = () => {
         <div className="flex flex-wrap justify-center gap-8">
           {currentTranslation.map((item, index) => (
             <motion.div key={index} className="w-full md:w-[45%] lg:w-[30%] flex">
-              <div className="bg-white/80 backdrop-blur-sm shadow-2xl rounded-2xl transform hover:scale-102 transition-all duration-500 hover:shadow-3xl w-full">
-                <div className="bg-gradient-to-br from-[#2EC4D2] via-blue-500 to-blue-600 p-8 rounded-xl shadow-lg">
+              <div className="bg-gradient-to-br from-[#2EC4D2] via-blue-500 to-blue-600 backdrop-blur-sm shadow-2xl rounded-2xl transform hover:scale-102 transition-all duration-500 hover:shadow-3xl w-full">
+                <div className="p-8">
                   <div className="flex justify-center mb-6">
                     <item.icon size={48} className="text-white" />
                   </div>
