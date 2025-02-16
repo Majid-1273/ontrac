@@ -47,7 +47,7 @@ const Navbar = () => {
           {navItems.map((item) => (
             <li key={item}>
               <Link
-                to={`/${item.toLowerCase().replace(" ", "-")}`}
+                to={item.trim() === 'HOME' ? `/` : `/${item.trim().toLowerCase().replace(" ", "-")}`}
                 className={`hover:text-black/50 transition-colors duration-300 relative py-2 group font-bold
                   ${location.pathname === `/${item.toLowerCase().replace(" ", "-")}` ? "text-black/50" : ""}`}
               >

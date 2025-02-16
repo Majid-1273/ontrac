@@ -111,7 +111,7 @@ const Footer = () => {
                             {navItems.map((item) => (
                                 <Link
                                     key={item}
-                                    to={`/${item.toLowerCase().replace(" ", "-")}`}
+                                    to={item.trim() === 'HOME' ? `/` : `/${item.trim().toLowerCase().replace(" ", "-")}`}
                                     className="block hover:text-black/50 transition-colors duration-300 relative group font-medium"
                                 >
                                     {item}
