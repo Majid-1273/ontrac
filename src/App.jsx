@@ -7,6 +7,7 @@ import { LanguageProvider } from "./LanguageContext";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Footer from "./components/Footer";
+import Blogs from "./pages/Blogs";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/our-services" element={<Services/>} />
+          <Route path="/blogs" element={<Blogs />} />
           <Route path="/about-us" element={<About/>} />
         </Routes>
         <Footer/>

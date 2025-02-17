@@ -9,12 +9,12 @@ const Banner = () => {
 
   const translations = {
     English: {
-      heading: "ONTRAC",
-      subheading: "Empowering Organizations through Innovative Technology Solutions and Exceptional Service Excellence."
+      heading: "Blogs",
+      subheading: "Stay updated with the latest insights, trends, and stories from the tech world."
     },
     Arabic: {
-      heading: "أونتراك",
-      subheading: "تمكين المؤسسات من خلال حلول تكنولوجية مبتكرة وتميز خدمي استثنائي."
+      heading: "المدونات",
+      subheading: "ابق على اطلاع بأحدث الرؤى والاتجاهات والقصص من عالم التكنولوجيا."
     }
   };
 
@@ -60,7 +60,7 @@ const Banner = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-            className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed text-white/90 mt-4"
+            className="text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed text-white/90 text-center mt-4"
           >
             {currentTranslation.subheading}
           </motion.p>
