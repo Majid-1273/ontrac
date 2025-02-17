@@ -38,22 +38,24 @@ const OntracMethodology = () => {
 
   return (
     <section className="bg-gray-100 px-4 md:px-8 lg:px-16 py-16 text-center">
-  <div className="max-w-7xl mx-auto">
-    <h2 className="text-3xl md:text-5xl font-bold mb-8">{t.title}</h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto">
-      {t.steps.map((step, index) => (
-        <div key={index} className="bg-white p-6 rounded-lg shadow-lg text-center">
-          <div className="flex items-center justify-center w-16 h-16 bg-blue-500 text-white rounded-full mx-auto mb-4">
-            <step.icon className="w-8 h-8" />
-          </div>
-          <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">{step.title}</h3>
-          <p className="text-gray-600 text-sm">{step.description}</p>
+      <div className="max-w-7xl mx-auto">
+        <h2 className="text-3xl md:text-5xl font-bold mb-8">{t.title}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-7xl mx-auto">
+          {t.steps.map((step, index) => (
+            <div 
+              key={index} 
+              className="bg-white p-6 rounded-lg shadow-lg text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+            >
+              <div className="flex items-center justify-center w-16 h-16 bg-blue-500 text-white rounded-full mx-auto mb-4 transition-transform duration-300 ease-in-out group-hover:scale-110">
+                <step.icon className="w-8 h-8" />
+              </div>
+              <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">{step.title}</h3>
+              <p className="text-gray-600 text-sm">{step.description}</p>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
-  </div>
-</section>
-
+      </div>
+    </section>
   );
 };
 

@@ -57,9 +57,18 @@ const AboutUs = () => {
         <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto mb-8 sm:mb-10">{t.description}</p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 md:gap-12">
           {t.aboutUsData.map((item, index) => (
-            <div key={index} className="bg-white shadow-lg rounded-lg overflow-hidden">
+            <div 
+              key={index} 
+              className="bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+            >
               {/* Image Display */}
-              <img src={item.image} alt="About Us" className="w-full h-40 sm:h-48 object-cover" />
+              <div className="overflow-hidden">
+                <img 
+                  src={item.image} 
+                  alt="About Us" 
+                  className="w-full h-40 sm:h-48 object-cover transition-transform duration-300 ease-in-out hover:scale-110"
+                />
+              </div>
               <div className="p-6 sm:p-8 md:p-12">
                 <p className="text-xs sm:text-sm text-gray-700">{item.text}</p>
               </div>
