@@ -24,6 +24,7 @@ const Services = () => {
       ],
     },
     Arabic: {
+      // Arabic translations remain the same
       title: "خدماتنا",
       services: [
         { icon: <FaLock size={40} />, title: "الأمان", description: "تعزيز موقف الأمان لديك، تشمل خدماتنا تصفية DNS والتدريب الشامل للمستخدمين النهائيين، مما يوفر نهجًا استباقيًا لحماية أجهزتك وشبكاتك." },
@@ -42,24 +43,25 @@ const Services = () => {
   const t = translations[selectedLanguage];
 
   return (
-    <section className="w-full bg-[#005F66] text-white p-8 sm:p-10 md:p-12 lg:p-16">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8">{t.title}</h2>
-        <div className="w-32 sm:w-40 md:w-48 h-1 bg-white mx-auto mb-10 sm:mb-12"></div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
-          {t.services.map((service, index) => (
-            <div 
-              key={index} 
-              className="bg-[#00757D] p-6 sm:p-8 md:p-10 rounded-lg shadow-lg flex flex-col items-center text-center"
-            >
-              <div className="mb-3 sm:mb-4 text-white">{service.icon}</div>
-              <h3 className="text-base sm:text-lg font-semibold">{service.title}</h3>
-              <p className="text-xs sm:text-sm mt-2">{service.description}</p>
-            </div>
-          ))}
+    <section className="w-full bg-gradient-to-r from-[#2EC4D2] to-blue-600 text-gray-800 p-8 sm:p-10 md:p-12 lg:p-16">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-6 sm:mb-8 text-white">{t.title}</h2>
+    <div className="w-32 sm:w-40 md:w-48 h-1 bg-white mx-auto mb-10 sm:mb-12"></div>
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
+      {t.services.map((service, index) => (
+        <div 
+          key={index} 
+          className="bg-gradient-to-r from-[#2EC4D2] to-blue-600 p-6 sm:p-8 md:p-10 rounded-lg shadow-lg flex flex-col items-center text-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+        >
+          <div className="mb-3 sm:mb-4 text-white">{service.icon}</div>
+          <h3 className="text-base sm:text-lg font-semibold text-white">{service.title}</h3>
+          <p className="text-xs sm:text-sm mt-2 text-gray-200">{service.description}</p>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+</section>
+
   );
 };
 
