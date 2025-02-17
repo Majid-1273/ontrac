@@ -45,7 +45,14 @@ const Footer = () => {
     };
 
     const t = translations[selectedLanguage];
-    const navItems = ["HOME", "ABOUT US", "OUR SERVICES", "BLOGS", "CONTACT"];
+    const navItems = [
+        { key: "home", label: t.home },
+        { key: "about", label: t.about },
+        { key: "services", label: t.services },
+        { key: "blogs", label: t.blogs },
+        { key: "contact", label: t.contact },
+    ];
+    
 
     return (
         <footer className="relative w-full">
@@ -108,17 +115,18 @@ const Footer = () => {
                             {t.navigation}
                         </h3>
                         <nav className="space-y-3">
-                            {navItems.map((item) => (
-                                <Link
-                                    key={item}
-                                    to={item.trim() === 'HOME' ? `/` : `/${item.trim().toLowerCase().replace(" ", "-")}`}
-                                    className="block hover:text-black/50 transition-colors duration-300 relative group font-medium"
-                                >
-                                    {item}
-                                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black/50 transition-all duration-300 group-hover:w-full"></span>
-                                </Link>
-                            ))}
-                        </nav>
+    {navItems.map((item) => (
+        <Link
+            key={item.key}
+            to={item.key === "home" ? "/" : `/${item.key}`}
+            className="block hover:text-black/50 transition-colors duration-300 relative group font-medium"
+        >
+            {item.label}
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-black/50 transition-all duration-300 group-hover:w-full"></span>
+        </Link>
+    ))}
+</nav>
+
                     </div>
 
                     {/* Location Section */}
