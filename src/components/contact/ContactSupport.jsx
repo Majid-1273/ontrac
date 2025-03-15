@@ -106,28 +106,17 @@ const ContactSupport = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     if (Object.values(formData).some((value) => !value)) {
       setErrorMessage(t.errorRequiredFields);
       setFadeOut(false);
       setTimeout(() => setFadeOut(true), 5000);
       return;
     }
-
-    const data = new FormData();
-    Object.entries(formData).forEach(([key, value]) => {
-      data.append(key, value);
-    });
-    data.append("key", "contact-form");
-
+  
     try {
-      // const response = await axios.post('', data);
-      const response = {
-        data: {
-          message: "Contact form submitted successfully",
-        },
-      };
-      if (response.data.message === "Contact form submitted successfully") {
+      const response = await axios.post("http://localhost:5000/send-email", formData);
+      if (response.data.message === "Email sent successfully") {
         setIsSubmitted(true);
         setErrorMessage("");
         setFormData({

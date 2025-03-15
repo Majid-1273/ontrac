@@ -10,7 +10,7 @@ function Enterprise() {
         English: {
             heading: "OUR ENTERPRISE SERVICES",
             subheading1:
-                "At OnTrac, we understand that addressing technology issues after they arise can be costlier and more disruptive. That's why our proactive IT management is strategically crafted to save you money and preemptively eliminate potential technology challenges for your business in New York City.",
+                "At OnTrac, we understand that addressing technology issues after they arise can be costlier and more disruptive. That's why our proactive IT management is strategically crafted to save you money and preemptively eliminate potential technology challenges for your business in Dubai.",
             subheading2:
                 "Our approach integrates routine preventative maintenance and robust real-time monitoring across your critical network, desktop, and mobile devices. This proactive stance aims to minimize technology downtime, maximize staff productivity, and provide a more predictable budget for your IT expenses.",
             subheading3:

@@ -11,6 +11,7 @@ import ciscoImg from "../assets/cisco os.jpg";
 import helpDeskImg from "../assets/contact us.jpg";
 import backupsImg from "../assets/backup.jpg";
 import fortigateImg from "../assets/fortigate.jpg";
+import { Helmet } from "react-helmet-async";
 import microsoftCloudImg from "../assets/microsoft cloud.jpg";
 
 // Blog data with translations
@@ -159,6 +160,11 @@ const Blogs = () => {
 
   return (
     <div dir={textDirection}>
+      <Helmet>
+        <title>Blogs - Ontrac</title>
+        <meta name="description" content="Explore our latest blog posts and stay updated with Ontrac insights." />
+      </Helmet>
+
       {/* Banner Section */}
       <Banner />
 
